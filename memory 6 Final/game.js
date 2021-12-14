@@ -28,6 +28,7 @@ $(document).ready(() => {
 
         settings.setPlayerName(playerName);
         settings.setNumOfImages(numberOfImages/2);
+        localStorage.removeItem('highScore');
         window.location.reload();
     });
     $("ul[role='tablist'] li").click( function(){
