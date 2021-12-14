@@ -1,0 +1,101 @@
+html{
+    /* background-image: url("pokertable.jpg"); */
+    /* background-color: white; */
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+}
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    background-image: url("pokertable.jpg");
+    background-color: rgb(228, 177, 177);
+    width: 750px;  
+    margin: 0 auto;
+    border: 3px solid greenyellow;
+    padding: 0 2em 1em;
+}
+h1 { 
+    font-size: 150%;
+    color: white;
+    margin-bottom: .5em;
+}
+label {
+    float: left;
+    width: 8em;
+}
+input, select { 
+    width: 10em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+input[type=checkbox] { 
+    width: 2em;
+}
+header p {
+	margin: 0 2em 1em 0;
+    color: white
+}
+#new_game, #player, #high_score, #correct {
+	float: left;
+}
+#cards img {
+    height: 100px;
+    width: 80px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    float: left; 
+}
+.clear {
+    clear: both;
+}
+#demo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#demo > div{
+    width: 12.5%;
+    padding: 2px;
+    box-sizing: border-box;
+    position: relative;
+}
+#demo > div img{
+    width: 100%;
+    height: 100%;
+}
+
+#demo > div.matched {
+    opacity: 0;
+}
+#demo > div img:not(.back){
+    max-height: 122px;
+    border-radius: 15px;
+}
+#demo > div .back{
+    position: absolute;
+    transition: 0.5s;
+    opacity: 1;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+#demo > div .back.selected{
+    pointer-events: none;
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+#demo > div .back.selected.hide{
+    opacity: 0;
+}
+#newGameLink{
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+#newGameLink:hover{
+    color: greenyellow;
+    text-decoration: wavy;
+    font-weight: bolder;
+}
